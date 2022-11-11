@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btn_cadastar_salvar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/azul_cinza"
+    tools:context=".MudarDados">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/txt_name_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginVertical="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="@color/abobora"
+        android:hint="Nome da empresa"
+        android:textAlignment="center"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/txt_senha_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/rounded"
+        android:backgroundTint="@color/abobora"
+        android:gravity="center"
+        android:hint="Nova reclamação"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_update_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="40dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/rounded"
+        android:text="Atualizar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textColor="@color/abobora"
+        android:text="Para deletar só é necessario o nome"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/btn_delete_pop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:background="@drawable/rounded"
+        android:text="Apagar" />
+
+</LinearLayout>
