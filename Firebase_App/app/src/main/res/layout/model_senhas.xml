@@ -7,6 +7,35 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/valor5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nome do Usuário"
+        android:layout_gravity="center"
+        android:textColor="@color/azul_cinza"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/azul_cinza"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <TextView
         android:id="@+id/valor1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -16,7 +45,7 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/txt_name"
+        android:id="@+id/txt_name_empresa"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"

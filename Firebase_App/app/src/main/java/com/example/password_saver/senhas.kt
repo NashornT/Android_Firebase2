@@ -1,11 +1,21 @@
 package com.example.password_saver
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.preference.PreferenceManager
+import android.util.Log
+import android.widget.EditText
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.password_saver.Dados.Senha
 import com.google.firebase.database.*
+import java.io.ByteArrayInputStream
+import java.io.ObjectInputStream
+import javax.crypto.Cipher
+import javax.crypto.SecretKey
+import javax.crypto.spec.IvParameterSpec
 
 class senhas : AppCompatActivity() {
 
@@ -13,6 +23,7 @@ class senhas : AppCompatActivity() {
     private lateinit var  recycleView: RecyclerView
     private lateinit var senhaArrayList: ArrayList<Senha>
     private lateinit var  Adapter: Adapter
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

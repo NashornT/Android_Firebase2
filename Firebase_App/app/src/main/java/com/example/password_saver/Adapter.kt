@@ -24,6 +24,7 @@ class Adapter(private  val senhaList: ArrayList<Senha>): RecyclerView.Adapter<Ad
         val senha:Senha = senhaList[position]
 
         holder.Nome.text = senha.nome
+        holder.Nome_empresa.text = senha.nome_empresa
         holder.senha.text = senha.senha
         holder.reclama.text = senha.reclama
         holder.id.text = senha.id
@@ -36,6 +37,7 @@ class Adapter(private  val senhaList: ArrayList<Senha>): RecyclerView.Adapter<Ad
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
 
         val Nome: TextView = itemView.findViewById(R.id.txt_name)
+        val Nome_empresa: TextView = itemView.findViewById(R.id.txt_name_empresa)
         val senha: TextView = itemView.findViewById(R.id.txt_senha)
         val reclama: TextView = itemView.findViewById(R.id.txt_reclama)
         val id: TextView = itemView.findViewById(R.id.txt_id)

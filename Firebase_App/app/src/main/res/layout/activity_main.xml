@@ -15,23 +15,41 @@
         android:background="@color/azul_cinza"
         tools:context=".MainActivity">
 
+
         <EditText
             android:id="@+id/nome"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
-            android:hint="Nome da empresa"
-            android:gravity="center"
             android:background="@drawable/rounded"
             android:backgroundTint="@color/abobora"
+            android:gravity="center"
+            android:hint="Nome do Usuario"
             android:minHeight="48dp"
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.009" />
+            app:layout_constraintVertical_bias="0.086" />
+
+        <EditText
+            android:id="@+id/nome_empresa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:layout_marginBottom="436dp"
+            android:background="@drawable/rounded"
+            android:backgroundTint="@color/abobora"
+            android:gravity="center"
+            android:hint="Nome da empresa"
+            android:minHeight="48dp"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nome"
+            app:layout_constraintVertical_bias="0.025" />
 
         <EditText
             android:id="@+id/senha"
@@ -46,10 +64,9 @@
             android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nome"
-            app:layout_constraintVertical_bias="0.045" />
+            app:layout_constraintVertical_bias="0.141" />
 
         <EditText
             android:id="@+id/reclama"
@@ -66,7 +83,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/nome"
-            app:layout_constraintVertical_bias="0.196" />
+            app:layout_constraintVertical_bias="0.248" />
 
         <Button
             android:id="@+id/btn_salvar"
@@ -74,7 +91,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="116dp"
             android:background="@drawable/rounded"
-            android:text="salvar"
+            android:text="Enviar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reclama" />
@@ -85,7 +102,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:background="@drawable/rounded"
-            android:text="Reclamações"
+            android:text="Ver Reclamações"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_salvar" />
@@ -111,9 +128,22 @@
             android:text="Alterar Dados"
             app:layout_constraintBottom_toTopOf="@+id/txt_sair"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_senhas"
-            app:layout_constraintVertical_bias="0.191" />
+            app:layout_constraintVertical_bias="0.691" />
+
+        <Button
+            android:id="@+id/btn_empresas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="44dp"
+            android:background="@drawable/rounded"
+            android:text="Ver empresas"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_senhas" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
