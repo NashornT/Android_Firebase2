@@ -89,10 +89,11 @@
             android:id="@+id/btn_salvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="116dp"
+            android:layout_marginTop="168dp"
             android:background="@drawable/rounded"
             android:text="Enviar"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reclama" />
 
@@ -100,7 +101,7 @@
             android:id="@+id/btn_senhas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="44dp"
             android:background="@drawable/rounded"
             android:text="Ver Reclamações"
             app:layout_constraintEnd_toEndOf="parent"
@@ -131,19 +132,31 @@
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_senhas"
-            app:layout_constraintVertical_bias="0.691" />
+            app:layout_constraintVertical_bias="0.419" />
 
         <Button
             android:id="@+id/btn_empresas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginTop="24dp"
             android:background="@drawable/rounded"
             android:text="Ver empresas"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_senhas" />
+
+        <Button
+            android:id="@+id/btn_rest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RestTest"
+            app:layout_constraintBottom_toBottomOf="@+id/txt_sair"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txt_alterar"
+            android:background="@drawable/rounded"
+            app:layout_constraintVertical_bias="0.311" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

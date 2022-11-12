@@ -2,10 +2,17 @@ package com.example.password_saver
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.password_saver.Dados.Senha
+import com.google.android.gms.ads.*
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import com.google.android.gms.ads.rewarded.RewardedAd
+import com.google.android.gms.ads.rewarded.RewardedAdLoadCallback
 import com.google.firebase.database.*
+import io.grpc.InternalChannelz.id
 
 class empresas : AppCompatActivity() {
 
@@ -13,6 +20,7 @@ class empresas : AppCompatActivity() {
     private lateinit var  recycleView: RecyclerView
     private lateinit var senhaArrayList: ArrayList<Senha>
     private lateinit var  Adapter: Adapter
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,6 +38,7 @@ class empresas : AppCompatActivity() {
         recycleView.adapter = Adapter
 
         getUserData()
+
 
 
     }

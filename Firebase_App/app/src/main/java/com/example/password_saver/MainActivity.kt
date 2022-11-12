@@ -13,7 +13,14 @@ import android.widget.Toast
 import com.example.password_saver.Auth.Login
 import com.example.password_saver.Dados.Senha
 import com.example.password_saver.Encrypt.Encry_Decry
+import com.example.password_saver.RestApi.Interface
+import com.example.password_saver.RestApi.Model
+import com.example.password_saver.RestApi.RestActivity
+import com.example.password_saver.RestApi.Retro
 import com.google.firebase.database.FirebaseDatabase
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.ObjectInputStream
@@ -29,6 +36,8 @@ class MainActivity : AppCompatActivity() {
     var encry:String = ""
 
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         val getUserpath = intent.getStringExtra("User")
         super.onCreate(savedInstanceState)
@@ -38,6 +47,7 @@ class MainActivity : AppCompatActivity() {
         val btn_sair = findViewById<TextView>(R.id.txt_sair)
         val btn_alterar = findViewById<Button>(R.id.txt_alterar)
         val btn_empresas = findViewById<Button>(R.id.btn_empresas)
+        val btn_rest = findViewById<Button>(R.id.btn_rest)
 
 
 
@@ -62,6 +72,10 @@ class MainActivity : AppCompatActivity() {
         }
         btn_empresas.setOnClickListener {
             val intent = Intent(this,empresas::class.java)
+            startActivity(intent)
+        }
+        btn_rest.setOnClickListener {
+            val intent = Intent(this,RestActivity::class.java)
             startActivity(intent)
         }
     }
@@ -140,6 +154,8 @@ class MainActivity : AppCompatActivity() {
         editor.putString("initialization_vector", strToSave)
         editor.apply()
     }
+
+
 
 
 

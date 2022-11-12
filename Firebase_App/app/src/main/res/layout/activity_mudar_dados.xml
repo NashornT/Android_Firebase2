@@ -23,7 +23,7 @@
         android:layout_marginRight="20dp"
         android:background="@drawable/rounded"
         android:backgroundTint="@color/abobora"
-        android:hint="Nome da empresa"
+        android:hint="Nome do usuario"
         android:textAlignment="center"
         android:textColor="@color/black" />
 
