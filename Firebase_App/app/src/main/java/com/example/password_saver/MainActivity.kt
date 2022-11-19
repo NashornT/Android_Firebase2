@@ -63,7 +63,10 @@ class MainActivity : AppCompatActivity() {
         }
         btn_sair.setOnClickListener{
             val intent = Intent(this,Login::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             startActivity(intent)
+            finish()
+
         }
         btn_alterar.setOnClickListener{
             val intent = Intent(this,MudarDados::class.java)
@@ -79,6 +82,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
 
     private fun saveAll()  {
 
@@ -103,10 +107,10 @@ class MainActivity : AppCompatActivity() {
 
         val ref2 = FirebaseDatabase.getInstance().getReference("Empresas_com_reclamacoes")
 
-        val reclamaid = ref2.push().key
-        val reclamaDB = Senha(nome,nome_empresa,senha,reclama,reclamaid.toString())
+        val nomeEncry = "****"
+        val reclamaDB = Senha(nomeEncry,nome_empresa,senha,reclama,senhaid.toString())
 
-        ref2.child(reclamaid.toString()).setValue(reclamaDB)
+        ref2.child(senhaid.toString()).setValue(reclamaDB)
 
         Toast.makeText(this,"Reclamação Enviada",Toast.LENGTH_SHORT).show()
 

@@ -89,11 +89,10 @@
             android:id="@+id/btn_salvar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="168dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/rounded"
             android:text="Enviar"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/reclama" />
 
@@ -101,10 +100,10 @@
             android:id="@+id/btn_senhas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="44dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/rounded"
             android:text="Ver Reclamações"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_salvar" />
 
@@ -112,7 +111,7 @@
             android:id="@+id/txt_sair"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="272dp"
+            android:layout_marginTop="236dp"
             android:text="Sair"
             android:textColor="#EC0000"
             android:textSize="30sp"
@@ -129,22 +128,21 @@
             android:text="Alterar Dados"
             app:layout_constraintBottom_toTopOf="@+id/txt_sair"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_senhas"
-            app:layout_constraintVertical_bias="0.419" />
+            app:layout_constraintVertical_bias="0.255" />
 
         <Button
             android:id="@+id/btn_empresas"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="40dp"
             android:background="@drawable/rounded"
             android:text="Ver empresas"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.501"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn_senhas" />
+            app:layout_constraintHorizontal_bias="0.713"
+            app:layout_constraintStart_toEndOf="@+id/btn_senhas"
+            app:layout_constraintTop_toBottomOf="@+id/btn_salvar" />
 
         <Button
             android:id="@+id/btn_rest"
