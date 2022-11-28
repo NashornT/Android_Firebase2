@@ -53,19 +53,17 @@ class Login : AppCompatActivity() {
 
             val user = (word + path)
 
-
             if( email.isNotEmpty() && senha.isNotEmpty()){
 
-                    firebaseAuth.signInWithEmailAndPassword(email,senha).addOnSuccessListener {
-                        //Todo() pode dar erro aqui
+                firebaseAuth.signInWithEmailAndPassword(email,senha).addOnSuccessListener {
+                    //Todo() pode dar erro aqui
 
-                        val intent = Intent(this, MainActivity::class.java )
-                        Log.d("value","$user")
-                        intent.putExtra("UserFirebase","${user}")
-                        startActivity(intent)
+                    val intent = Intent(this, MainActivity::class.java )
+                    Log.d("valueFirebase","$user")
+                    intent.putExtra("User","${user}")
+                    startActivity(intent)
 
-                    }
-
+                }
             }else{
                 Toast.makeText(this,"Campos Vazios não são permitidos", Toast.LENGTH_SHORT).show()
             }

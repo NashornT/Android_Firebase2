@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.core.widget.doAfterTextChanged
 import com.example.password_saver.Auth.Login
 import com.example.password_saver.Dados.Senha
 import com.example.password_saver.Encrypt.Encry_Decry
@@ -50,7 +51,18 @@ class MainActivity : AppCompatActivity() {
         val btn_rest = findViewById<Button>(R.id.btn_rest)
 
 
+        val nome = findViewById<EditText>(R.id.nome).text
+        val nome_empresa = findViewById<EditText>(R.id.nome_empresa).text
+        val senha = findViewById<EditText>(R.id.senha).text
+        val reclama = findViewById<EditText>(R.id.reclama)
 
+        btn.isEnabled = false
+
+        reclama.doAfterTextChanged {
+            if(nome.isNotEmpty() and nome_empresa.isNotEmpty() and senha.isNotEmpty() and reclama.text.isNotEmpty()){
+                btn.isEnabled = true
+            }
+        }
 
         btn.setOnClickListener {
             saveAll()
@@ -96,23 +108,32 @@ class MainActivity : AppCompatActivity() {
 
 //        val db = FirebaseFirestore.getInstance()
 //        db.collection("senhas")
-        encry = encrypt(this,senha).toString()
-        encry_name = encrypt(this,nome_empresa).toString()
+
+        if(nome.isEmpty() or nome_empresa.isEmpty() or senha.isEmpty() or reclama.isEmpty()){
+            Toast.makeText(this,"Preencha todos os campos!!",Toast.LENGTH_SHORT).show()
+        }else{
+
+            encry = encrypt(this,senha).toString()
+            encry_name = encrypt(this,nome_empresa).toString()
 
 
-        val senhaid = ref.push().key
-        val senhaDB = Senha(nome,encry_name,encry,reclama,senhaid.toString())
+            val senhaid = ref.push().key
+            val senhaDB = Senha(nome,encry_name,encry,reclama,senhaid.toString())
 
-        ref.child(nome).setValue(senhaDB)
+            ref.child(nome).setValue(senhaDB)
 
-        val ref2 = FirebaseDatabase.getInstance().getReference("Empresas_com_reclamacoes")
+            val ref2 = FirebaseDatabase.getInstance().getReference("Empresas_com_reclamacoes")
 
-        val nomeEncry = "****"
-        val reclamaDB = Senha(nomeEncry,nome_empresa,senha,reclama,senhaid.toString())
+            val nomeEncry = "****"
+            val reclamaDB = Senha(nomeEncry,nome_empresa,senha,reclama,senhaid.toString())
 
-        ref2.child(senhaid.toString()).setValue(reclamaDB)
+            ref2.child(senhaid.toString()).setValue(reclamaDB)
 
-        Toast.makeText(this,"Reclamação Enviada",Toast.LENGTH_SHORT).show()
+            Toast.makeText(this,"Reclamação Enviada",Toast.LENGTH_SHORT).show()
+
+        }
+
+
 
 
     }
